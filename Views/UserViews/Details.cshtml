@@ -1,0 +1,25 @@
+﻿@model AmsApp.Models.UserViews
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>UserViews</legend>
+
+    <div class="display-label">ViewsId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ViewsId)
+    </div>
+
+    <div class="display-label">UserId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.UserViewsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

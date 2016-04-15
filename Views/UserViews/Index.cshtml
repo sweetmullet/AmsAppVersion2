@@ -1,0 +1,39 @@
+﻿@model IEnumerable<AmsApp.Models.UserViews>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            ViewsId
+        </th>
+        <th>
+            UserId
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ViewsId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UserViewsId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UserViewsId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UserViewsId })
+        </td>
+    </tr>
+}
+
+</table>

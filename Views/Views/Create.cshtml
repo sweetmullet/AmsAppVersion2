@@ -1,0 +1,49 @@
+﻿@model AmsApp.Models.Views
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Views</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ViewsDescription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ViewsDescription)
+            @Html.ValidationMessageFor(model => model.ViewsDescription)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ViewActiveInd)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ViewActiveInd)
+            @Html.ValidationMessageFor(model => model.ViewActiveInd)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsBaseView)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsBaseView)
+            @Html.ValidationMessageFor(model => model.IsBaseView)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

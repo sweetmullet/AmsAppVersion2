@@ -1,0 +1,30 @@
+﻿@model AmsApp.Models.Views
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Views</legend>
+
+    <div class="display-label">ViewsDescription</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ViewsDescription)
+    </div>
+
+    <div class="display-label">ViewActiveInd</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ViewActiveInd)
+    </div>
+
+    <div class="display-label">IsBaseView</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsBaseView)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ViewsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
