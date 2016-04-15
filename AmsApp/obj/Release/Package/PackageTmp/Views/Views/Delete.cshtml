@@ -1,0 +1,33 @@
+﻿@model AmsApp.Models.Views
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Views</legend>
+
+    <div class="display-label">ViewsDescription</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ViewsDescription)
+    </div>
+
+    <div class="display-label">ViewActiveInd</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ViewActiveInd)
+    </div>
+
+    <div class="display-label">IsBaseView</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsBaseView)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
